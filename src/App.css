@@ -1,1 +1,9 @@
-
+.bot-header {
+  width: 100%;
+  height: 200px;
+  background-image: url("../public/sfondi/Background-image.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
