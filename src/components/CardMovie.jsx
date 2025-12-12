@@ -3,7 +3,11 @@ export default function CardMovie({ movie }) {
     <div className="col-4" key={movie.id}>
       <div className="card h-100">
         <div className="position-relative">
-          <img src="poster.jpg" className="card-img-top" alt="Poster Film" />
+          <img
+            src={`http://localhost:3000/movies_cover/${movie.image}`}
+            className="card-img-top"
+            alt={`${movie.title} poster`}
+          />
 
           <h5 className="position-absolute top-0 start-0 m-2 text-white bg-dark bg-opacity-75 p-1 rounded">
             {movie.title}
