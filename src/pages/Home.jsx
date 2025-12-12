@@ -15,9 +15,14 @@ export default function Home() {
   };
 
   useEffect(() => {
-    axios.get("http://localhost:3000/movies/").then((response) => {
-      setMovies(response.data);
-    });
+    axios
+      .get("http://localhost:3000/movies/")
+      .then((response) => {
+        setMovies(response.data);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
   }, []);
 
   return (
