@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import DefaultLayout from "../components/DefaultLayout";
 
-import AboutUs from "../components/AboutUs";
-import ContactUs from "../components/ContactUs";
-import Home from "../components/Home";
-import ShowMovie from "../components/ShowMovie";
+import DefaultLayout from "./pages/DefaultLayout";
+import Home from "./pages/Home";
+import AboutUs from "./pages/AboutUs";
+import ContactUs from "./pages/ContactUs";
+import DetailsMovie from "./pages/DetailsMovie";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/contact-us" element={<ContactUs />} />
-            <Route path="/movie/:id" element={<ShowMovie />} />
+            <Route path="/movie/:id" element={<DetailsMovie />} />
           </Route>
         </Routes>
       </BrowserRouter>

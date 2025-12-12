@@ -1,4 +1,4 @@
-import Logo_name from "../src/assets/loghi/logo_name.png";
+import Logo_name from "../../src/assets/loghi/logo_name.png";
 
 import { NavLink } from "react-router-dom";
 
