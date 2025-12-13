@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import CardMovie from "../components/CardMovie";
+import CardDetailsMovie from "../components/CardDetailsMovie";
 
 export default function DetailsMovie() {
   //Recupero id dinamico
@@ -13,6 +13,8 @@ export default function DetailsMovie() {
       //Chiamata ajax con id dinamico
       .get(`http://localhost:3000/movies/${id}`)
       .then((response) => {
+        console.log(response);
+
         setMovie(response.data);
       })
       .catch((err) => {
@@ -24,5 +26,5 @@ export default function DetailsMovie() {
   if (!movie) return <p>Loading...</p>;
 
   //Movie riceve dati corretti: id assicura congruenza click => dati voluti
-  return <CardMovie movie={movie} />;
+  return <CardDetailsMovie movie={movie} />;
 }
