@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import CardMovie from "../components/CardMovie";
 
 export default function DetailsMovie() {
   const { id } = useParams();
@@ -17,20 +18,8 @@ export default function DetailsMovie() {
       });
   }, [id]);
 
+  //movie inzialmente vuoto, attedi l'azione del "setMovie"
   if (!movie) return <p>Loading...</p>;
 
-  return (
-    <div className="container mt-5">
-      <h1>{movie.title}</h1>
-      <p>{movie.abstract}</p>
-      <div>
-        <h3>Recensioni:</h3>
-        <ul>
-          {movie.reviews.map((review) => (
-            <li key={review.id}>{review.text}</li>
-          ))}
-        </ul>
-      </div>
-    </div>
-  );
+  return <CardMovie movie={movie} />;
 }

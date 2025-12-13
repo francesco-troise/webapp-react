@@ -1,13 +1,14 @@
 export default function CardMovie({ movie, onClick }) {
   return (
-    <div className="col-4" key={movie.id}>
+    <div className="col-4">
       <div className="card h-100">
         <div className="position-relative">
+          {/* In -img: Se "onCLick" viene passata viene eseguita, se è undefind resta undefind*/}
           <img
             src={`http://localhost:3000/movies_cover/${movie.image}`}
             className="card-img-top"
             alt={`${movie.title} poster`}
-            onClick={() => onClick(movie)}
+            onClick={onClick && (() => onClick(movie))}
           />
 
           <h5 className="position-absolute top-0 start-0 m-2 text-white bg-dark bg-opacity-75 p-1 rounded">

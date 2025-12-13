@@ -1,5 +1,6 @@
 import Logo_name from "../../src/assets/loghi/logo_name.png";
 
+//Gestione navigazione attraverso link
 import { NavLink } from "react-router-dom";
 
 export default function Footer() {

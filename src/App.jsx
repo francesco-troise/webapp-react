@@ -1,5 +1,7 @@
+//Import del router e delle rotte
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+//Import delle pagine: ogni pagina una rotta
 import DefaultLayout from "./pages/DefaultLayout";
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
