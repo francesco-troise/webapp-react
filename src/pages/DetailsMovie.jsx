@@ -4,11 +4,13 @@ import axios from "axios";
 import CardMovie from "../components/CardMovie";
 
 export default function DetailsMovie() {
+  //Recupero id dinamico
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
 
   useEffect(() => {
     axios
+      //Chiamata ajax con id dinamico
       .get(`http://localhost:3000/movies/${id}`)
       .then((response) => {
         setMovie(response.data);
@@ -21,5 +23,6 @@ export default function DetailsMovie() {
   //movie inzialmente vuoto, attedi l'azione del "setMovie"
   if (!movie) return <p>Loading...</p>;
 
+  //Movie riceve dati corretti: id assicura congruenza click => dati voluti
   return <CardMovie movie={movie} />;
 }
