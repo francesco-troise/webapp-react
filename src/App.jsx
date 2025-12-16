@@ -28,7 +28,7 @@ function App() {
           {/*rotte admin*/}
           <Route element={<AdminDefaultLayout />}>
             <Route path="/admin" element={<AdminHome />} />
-            <Route path="/Admin-form" element={<AdminForm />} />
+            <Route path="/admin-form" element={<AdminForm />} />
           </Route>
         </Routes>
       </BrowserRouter>

@@ -17,7 +17,7 @@ export default function HeaderAdmin() {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link text-dark" to="/form-film">
+                <NavLink className="nav-link text-dark" to="/admin-form">
                   Form Film
                 </NavLink>
               </li>
