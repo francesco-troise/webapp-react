@@ -44,6 +44,7 @@ export default function AdminForm() {
     axios
       //axios in "post" accetta l'endpoin e i data da inviare
       .post("http://localhost:3000/movies", data)
+
       .then(() => {
         //Reset dello stato contenenti i dati del form(dopo l'invio di questi)
         setFormData({
