@@ -1,3 +1,5 @@
+import { LoadingProvider } from "./context/LoadingContext";
+
 //Import del router e delle rotte
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -16,22 +18,24 @@ import AdminForm from "./admin_pages/AdminForm";
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route element={<DefaultLayout />}>
-            <Route index element={<Home />} />
-            <Route path="/about-us" element={<AboutUs />} />
-            <Route path="/contact-us" element={<ContactUs />} />
-            <Route path="/movie/:id" element={<DetailsMovie />} />
-          </Route>
+      <LoadingProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route element={<DefaultLayout />}>
+              <Route index element={<Home />} />
+              <Route path="/about-us" element={<AboutUs />} />
+              <Route path="/contact-us" element={<ContactUs />} />
+              <Route path="/movie/:id" element={<DetailsMovie />} />
+            </Route>
 
-          {/*rotte admin*/}
-          <Route element={<AdminDefaultLayout />}>
-            <Route path="/admin" element={<AdminHome />} />
-            <Route path="/admin-form" element={<AdminForm />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+            {/*rotte admin*/}
+            <Route element={<AdminDefaultLayout />}>
+              <Route path="/admin" element={<AdminHome />} />
+              <Route path="/admin-form" element={<AdminForm />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </LoadingProvider>
     </>
   );
 }
