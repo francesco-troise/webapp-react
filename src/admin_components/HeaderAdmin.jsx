@@ -12,8 +12,8 @@ export default function HeaderAdmin() {
           <nav>
             <ul className="nav justify-content-center">
               <li className="nav-item">
-                <NavLink className="nav-link text-dark" to="/catalogo">
-                  Catalogo
+                <NavLink className="nav-link text-dark" to="/admin">
+                  Admin home
                 </NavLink>
               </li>
               <li className="nav-item">

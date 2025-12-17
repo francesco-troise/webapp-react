@@ -44,12 +44,17 @@ export default function Header() {
                 About us
               </NavLink>
             </li>
-            <li>
+            <li className="me-3">
               <NavLink
                 to="/contact-us"
                 className="text-light text-decoration-none"
               >
                 Contact us
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/admin" className="text-light text-decoration-none">
+                Admin page
               </NavLink>
             </li>
           </ul>
